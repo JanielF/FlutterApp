@@ -17,7 +17,7 @@ class _AcercaDePageState extends State<AcercaDePage> {
           children: [
             CircleAvatar(
               radius: 100,
-              backgroundImage: AssetImage('assets/Yo.jpeg'), // Reemplaza 'tu_foto.jpg' con el nombre de tu foto en la carpeta de activos
+              backgroundImage: AssetImage('assets/Yo.jpeg'), 
             ),
             SizedBox(height: 20),
             Text(

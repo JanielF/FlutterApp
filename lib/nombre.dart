@@ -9,7 +9,7 @@ class NuevaPagina extends StatefulWidget {
 
 class _NuevaPaginaState extends State<NuevaPagina> {
   TextEditingController _nameController = TextEditingController();
-  String _gender = ''; // Inicializamos _gender con un valor predeterminado
+  String _gender = ''; 
   bool _isLoading = false;
 
   Future<void> _predictGender() async {
@@ -25,9 +25,8 @@ class _NuevaPaginaState extends State<NuevaPagina> {
         _gender = data['gender'];
       });
     } else {
-      // Manejo de error si la solicitud falla
       setState(() {
-        _gender = ''; // Establecemos _gender como vacío en caso de error
+        _gender = ''; 
       });
     }
 
@@ -68,7 +67,7 @@ class _NuevaPaginaState extends State<NuevaPagina> {
                     child: Text('Predecir Género'),
                   ),
                   SizedBox(height: 20),
-                  _gender.isNotEmpty // Verificamos si _gender no está vacío
+                  _gender.isNotEmpty
                       ? _gender.toLowerCase() == 'male'
                           ? Container(
                               width: 200,

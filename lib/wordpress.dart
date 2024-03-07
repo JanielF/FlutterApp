@@ -10,9 +10,9 @@ class WordPressPage extends StatefulWidget {
 
 class _WordPressPageState extends State<WordPressPage> {
   late List<dynamic> _newsList = [];
-  final wordpressLogoUrl = 'assets/logo.webp'; // Ruta local de la imagen del logo de WordPress
-  double _logoWidth = 550; // Ancho inicial de la imagen del logo
-  double _logoHeight = 200; // Alto inicial de la imagen del logo
+  final wordpressLogoUrl = 'assets/logo.webp'; 
+  double _logoWidth = 550; 
+  double _logoHeight = 200; 
 
   @override
   void initState() {
@@ -21,7 +21,7 @@ class _WordPressPageState extends State<WordPressPage> {
   }
 
   Future<void> _fetchNews() async {
-    final apiKey = '07ad18cdaa394bf086144c3843cea332'; // Reemplazar con tu propia API key de NewsAPI
+    final apiKey = '07ad18cdaa394bf086144c3843cea332'; //API key de NewsAPI
     final url = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=$apiKey';
 
     try {
@@ -58,9 +58,9 @@ class _WordPressPageState extends State<WordPressPage> {
                     alignment: Alignment.center,
                     margin: EdgeInsets.symmetric(vertical: 20),
                     child: Image.asset(
-                      wordpressLogoUrl, // Utiliza la ruta local de la imagen del logo de WordPress
-                      width: _logoWidth, // Usa la variable _logoWidth como ancho
-                      height: _logoHeight, // Usa la variable _logoHeight como alto
+                      wordpressLogoUrl, 
+                      width: _logoWidth, 
+                      height: _logoHeight, 
                       fit: BoxFit.cover,
                     ),
                   );

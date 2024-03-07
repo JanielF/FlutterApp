@@ -9,8 +9,8 @@ class EdadPage extends StatefulWidget {
 
 class _EdadPageState extends State<EdadPage> {
   TextEditingController _nameController = TextEditingController();
-  int _age = -1; // Inicializamos _age con un valor predeterminado
-  String _message = ''; // Inicializamos _message con un valor predeterminado
+  int _age = -1; 
+  String _message = ''; 
   bool _isLoading = false;
 
   Future<void> _predictAge() async {
@@ -24,13 +24,13 @@ class _EdadPageState extends State<EdadPage> {
       final data = jsonDecode(response.body);
       setState(() {
         _age = data['age'];
-        _message = _getMessageFromAge(_age); // Obtener el mensaje basado en la edad
+        _message = _getMessageFromAge(_age); 
       });
     } else {
-      // Manejo de error si la solicitud falla
+      
       setState(() {
-        _age = -1; // Establecemos _age como -1 en caso de error
-        _message = ''; // Establecemos _message como vacío en caso de error
+        _age = -1; 
+        _message = '';
       });
     }
 
